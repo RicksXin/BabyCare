@@ -1,11 +1,56 @@
 export default defineAppConfig({
   pages: [
-    'pages/index/index'
+    'pages/index/index',
+    'pages/record/index',
+    'pages/stats/index',
+    'pages/mine/index',
+    'pages/record/feeding',
+    'pages/record/diaper',
+    'pages/record/sleep',
+    'pages/record/health',
+    'pages/auth/login',
+    'pages/family/join',
+    'pages/mine/family',
+    'pages/mine/baby-profile',
+    'pages/mine/reminders',
+    'pages/mine/settings',
   ],
+  tabBar: {
+    color: '#999999',
+    selectedColor: '#FF6B81',
+    backgroundColor: '#ffffff',
+    borderStyle: 'white',
+    list: [
+      {
+        pagePath: 'pages/index/index',
+        text: '首页',
+        iconPath: 'assets/icons/home.png',
+        selectedIconPath: 'assets/icons/home-active.png',
+      },
+      {
+        pagePath: 'pages/record/index',
+        text: '记录',
+        iconPath: 'assets/icons/record.png',
+        selectedIconPath: 'assets/icons/record-active.png',
+      },
+      {
+        pagePath: 'pages/stats/index',
+        text: '统计',
+        iconPath: 'assets/icons/stats.png',
+        selectedIconPath: 'assets/icons/stats-active.png',
+      },
+      {
+        pagePath: 'pages/mine/index',
+        text: '我的',
+        iconPath: 'assets/icons/mine.png',
+        selectedIconPath: 'assets/icons/mine-active.png',
+      },
+    ],
+  },
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
-  }
+    navigationBarBackgroundColor: '#FF6B81',
+    navigationBarTitleText: '宝宝照护',
+    navigationBarTextStyle: 'white',
+  },
 })

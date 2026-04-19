@@ -1,0 +1,84 @@
+.record-page {
+  padding-bottom: 120px;
+
+  .type-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px;
+    gap: 20px;
+
+    .type-item {
+      width: calc(50% - 10px);
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+      .type-icon {
+        font-size: 56px;
+        display: block;
+      }
+
+      .type-label {
+        font-size: 28px;
+        margin-top: 12px;
+        display: block;
+        color: #333;
+      }
+    }
+  }
+
+  .record-list {
+    padding: 0 24px;
+
+    .section-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .empty-tip {
+      text-align: center;
+      padding: 60px 0;
+      color: #ccc;
+      font-size: 26px;
+    }
+
+    .record-item {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 12px;
+
+      .record-icon {
+        font-size: 36px;
+        margin-right: 16px;
+      }
+
+      .record-info {
+        flex: 1;
+
+        .record-type {
+          font-size: 28px;
+          display: block;
+        }
+
+        .record-by {
+          font-size: 22px;
+          color: #999;
+          margin-top: 4px;
+          display: block;
+        }
+      }
+
+      .record-time {
+        font-size: 22px;
+        color: #999;
+      }
+    }
+  }
+}

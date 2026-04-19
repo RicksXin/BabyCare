@@ -1,17 +1,16 @@
 import { PropsWithChildren } from 'react'
 import { useLaunch } from '@tarojs/taro'
+import { initCloud } from '@/services/cloud'
 
 import './app.scss'
 
 function App({ children }: PropsWithChildren<any>) {
   useLaunch(() => {
-    console.log('App launched.')
+    console.log('BabyCare App launched.')
+    initCloud()
   })
 
-  // children 是将要会渲染的页面
   return children
 }
-  
-
 
 export default App

@@ -1,4 +1,5 @@
 import { defineConfig, type UserConfigExport } from '@tarojs/cli'
+import path from 'path'
 
 import devConfig from './dev'
 import prodConfig from './prod'
@@ -18,8 +19,11 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
     sourceRoot: 'src',
     outputRoot: 'dist',
     plugins: [
-      "@tarojs/plugin-generator"
+      "@tarojs/plugin-generator",
     ],
+    sass: {
+      data: `@import "@nutui/nutui-react-taro/dist/styles/variables.scss";\n`,
+    },
     defineConstants: {
     },
     copy: {
@@ -29,13 +33,19 @@ export default defineConfig<'vite'>(async (merge, { command, mode }) => {
       }
     },
     framework: 'react',
-    compiler: 'vite',
+    compiler: {
+      type: 'vite',
+      vitePlugins: [],
+    },
+    alias: {
+      '@': path.resolve(__dirname, '..', 'src'),
+    },
     mini: {
       postcss: {
         pxtransform: {
           enable: true,
           config: {
-
+            selectorBlackList: ['nut-']
           }
         },
         cssModules: {

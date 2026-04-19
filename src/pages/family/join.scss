@@ -1,0 +1,41 @@
+.join-page {
+  padding: 48px 24px;
+
+  .join-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 48px 32px;
+    text-align: center;
+
+    .join-title {
+      font-size: 32px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    .code-input {
+      width: 100%;
+      padding: 24px;
+      background: #F5F5F5;
+      border-radius: 16px;
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: 16px;
+      box-sizing: border-box;
+    }
+
+    .join-btn {
+      margin-top: 40px;
+      padding: 28px 0;
+      background: linear-gradient(135deg, #FF6B81, #FF8E9E);
+      border-radius: 48px;
+
+      .join-btn-text {
+        color: #fff;
+        font-size: 32px;
+        font-weight: bold;
+      }
+    }
+  }
+}

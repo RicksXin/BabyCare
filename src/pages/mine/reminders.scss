@@ -1,0 +1,71 @@
+.reminders-page {
+  padding: 24px;
+
+  .section-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .empty-tip {
+    text-align: center;
+    padding: 80px 0;
+    color: #ccc;
+    font-size: 26px;
+  }
+
+  .reminder-item {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 12px;
+
+    .reminder-info {
+      flex: 1;
+
+      .reminder-title {
+        font-size: 28px;
+        display: block;
+      }
+
+      .reminder-type {
+        font-size: 22px;
+        color: #999;
+        margin-top: 4px;
+        display: block;
+      }
+    }
+
+    .toggle {
+      width: 88px;
+      height: 48px;
+      border-radius: 24px;
+      background: #ddd;
+      position: relative;
+      transition: background 0.3s;
+
+      &.on {
+        background: #FF6B81;
+
+        .toggle-dot {
+          transform: translateX(40px);
+        }
+      }
+
+      .toggle-dot {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        transition: transform 0.3s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

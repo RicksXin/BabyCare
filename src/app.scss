@@ -1,0 +1,36 @@
+@import "@nutui/nutui-react-taro/dist/styles/variables.scss";
+
+// 主题色
+$primary-color: #FF6B81;
+$primary-light: #FFE4E8;
+$text-color: #333333;
+$text-secondary: #999999;
+$bg-color: #F5F5F5;
+$white: #FFFFFF;
+$border-color: #EEEEEE;
+
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  font-size: 28px;
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+// 通用工具类
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-container {
+  padding: 24px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}

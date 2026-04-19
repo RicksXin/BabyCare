@@ -1,0 +1,51 @@
+.settings-page {
+  padding: 24px;
+
+  .menu-list {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 28px 24px;
+      border-bottom: 1px solid #F5F5F5;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .menu-label {
+        flex: 1;
+        font-size: 28px;
+      }
+
+      .menu-arrow {
+        font-size: 32px;
+        color: #ccc;
+      }
+    }
+  }
+
+  .logout-btn {
+    margin-top: 48px;
+    padding: 28px 0;
+    background: #fff;
+    border-radius: 48px;
+    text-align: center;
+
+    .logout-text {
+      color: #FF4444;
+      font-size: 30px;
+    }
+  }
+
+  .version {
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 22px;
+    color: #ccc;
+  }
+}

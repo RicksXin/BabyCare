@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "BabyCare",
   "description": "月嫂照护",
-  "appid": "touristappid",
+  "appid": "wx1784519777e674b5",
   "setting": {
     "urlCheck": true,
     "es6": false,

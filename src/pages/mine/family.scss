@@ -1,0 +1,110 @@
+.family-page {
+  padding: 24px;
+
+  .family-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+
+    .family-name {
+      font-size: 36px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .invite-section {
+      background: #FFF5F6;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .invite-label {
+        font-size: 26px;
+        color: #999;
+      }
+
+      .invite-code {
+        font-size: 36px;
+        font-weight: bold;
+        color: #FF6B81;
+        letter-spacing: 8px;
+      }
+    }
+  }
+
+  .member-section {
+    .section-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .member-item {
+      display: flex;
+      align-items: center;
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 12px;
+
+      .member-avatar {
+        font-size: 40px;
+        margin-right: 16px;
+      }
+
+      .member-info {
+        flex: 1;
+
+        .member-name {
+          font-size: 28px;
+          display: block;
+        }
+
+        .member-role {
+          font-size: 22px;
+          color: #999;
+          margin-top: 4px;
+          display: block;
+        }
+      }
+
+      .admin-badge {
+        font-size: 22px;
+        color: #FF6B81;
+        background: #FFE4E8;
+        padding: 4px 12px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .no-family {
+    text-align: center;
+    padding: 120px 0;
+
+    .no-family-text {
+      font-size: 28px;
+      color: #999;
+      display: block;
+      margin-bottom: 32px;
+    }
+
+    .create-btn {
+      display: inline-block;
+      padding: 24px 64px;
+      background: linear-gradient(135deg, #FF6B81, #FF8E9E);
+      border-radius: 48px;
+
+      .create-btn-text {
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+  }
+}

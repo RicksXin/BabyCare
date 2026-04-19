@@ -1,0 +1,116 @@
+.mine-page {
+  padding-bottom: 120px;
+
+  .user-header {
+    display: flex;
+    align-items: center;
+    padding: 40px 24px;
+    background: linear-gradient(135deg, #FF6B81, #FF8E9E);
+    color: #fff;
+
+    .user-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 24px;
+
+      .avatar-emoji {
+        font-size: 48px;
+      }
+    }
+
+    .user-info {
+      flex: 1;
+
+      .user-name {
+        font-size: 34px;
+        font-weight: bold;
+        display: block;
+      }
+
+      .family-name {
+        font-size: 24px;
+        opacity: 0.9;
+        margin-top: 8px;
+        display: block;
+      }
+    }
+
+    .login-btn {
+      padding: 12px 32px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 32px;
+
+      .login-btn-text {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .baby-card {
+    margin: 24px;
+    padding: 24px;
+    background: #fff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    .baby-emoji {
+      font-size: 48px;
+      margin-right: 20px;
+    }
+
+    .baby-detail {
+      .baby-name {
+        font-size: 30px;
+        font-weight: bold;
+        display: block;
+      }
+
+      .baby-birthday {
+        font-size: 24px;
+        color: #999;
+        margin-top: 4px;
+        display: block;
+      }
+    }
+  }
+
+  .menu-list {
+    margin: 0 24px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 28px 24px;
+      border-bottom: 1px solid #F5F5F5;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .menu-icon {
+        font-size: 36px;
+        margin-right: 16px;
+      }
+
+      .menu-label {
+        flex: 1;
+        font-size: 28px;
+      }
+
+      .menu-arrow {
+        font-size: 32px;
+        color: #ccc;
+      }
+    }
+  }
+}
