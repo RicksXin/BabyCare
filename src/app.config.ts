@@ -1,9 +1,9 @@
 export default defineAppConfig({
   pages: [
     'pages/index/index',
-    'pages/record/index',
     'pages/stats/index',
-    'pages/mine/index',
+    'pages/ai/index',
+    'pages/settings/index',
     'pages/record/feeding',
     'pages/record/diaper',
     'pages/record/sleep',
@@ -13,7 +13,6 @@ export default defineAppConfig({
     'pages/mine/family',
     'pages/mine/baby-profile',
     'pages/mine/reminders',
-    'pages/mine/settings',
   ],
   tabBar: {
     color: '#999999',
@@ -28,22 +27,22 @@ export default defineAppConfig({
         selectedIconPath: 'assets/icons/home-active.png',
       },
       {
-        pagePath: 'pages/record/index',
-        text: '记录',
-        iconPath: 'assets/icons/record.png',
-        selectedIconPath: 'assets/icons/record-active.png',
-      },
-      {
         pagePath: 'pages/stats/index',
         text: '统计',
         iconPath: 'assets/icons/stats.png',
         selectedIconPath: 'assets/icons/stats-active.png',
       },
       {
-        pagePath: 'pages/mine/index',
-        text: '我的',
-        iconPath: 'assets/icons/mine.png',
-        selectedIconPath: 'assets/icons/mine-active.png',
+        pagePath: 'pages/ai/index',
+        text: 'AI助手',
+        iconPath: 'assets/icons/ai.png',
+        selectedIconPath: 'assets/icons/ai-active.png',
+      },
+      {
+        pagePath: 'pages/settings/index',
+        text: '设置',
+        iconPath: 'assets/icons/settings.png',
+        selectedIconPath: 'assets/icons/settings-active.png',
       },
     ],
   },

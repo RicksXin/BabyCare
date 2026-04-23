@@ -1,4 +1,4 @@
-.mine-page {
+.settings-page {
   padding-bottom: 120px;
 
   .user-header {
@@ -82,7 +82,7 @@
   }
 
   .menu-list {
-    margin: 0 24px;
+    margin: 0 24px 24px;
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
@@ -112,5 +112,26 @@
         color: #ccc;
       }
     }
+  }
+
+  .logout-btn {
+    margin: 24px;
+    padding: 28px 0;
+    background: #fff;
+    border-radius: 48px;
+    text-align: center;
+
+    .logout-text {
+      color: #FF4444;
+      font-size: 30px;
+    }
+  }
+
+  .version {
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 22px;
+    color: #ccc;
   }
 }

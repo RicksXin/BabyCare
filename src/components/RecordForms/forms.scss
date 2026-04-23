@@ -1,0 +1,222 @@
+.record-form {
+  padding: 24px 0;
+
+  .timer-section {
+    text-align: center;
+    padding: 32px 0;
+    background: #fff;
+    border-radius: 24px;
+    margin-bottom: 24px;
+
+    .timer-display {
+      font-size: 64px;
+      font-weight: 300;
+      color: #FF6B81;
+      display: block;
+      font-family: 'Menlo', monospace;
+    }
+
+    .timer-btn {
+      margin-top: 24px;
+      display: inline-block;
+      padding: 16px 56px;
+      background: linear-gradient(135deg, #FF6B81, #FF8E9E);
+      border-radius: 48px;
+
+      .timer-btn-text {
+        font-size: 28px;
+        color: #fff;
+      }
+    }
+
+    &.sleep-timer {
+      .timer-emoji {
+        font-size: 64px;
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      .timer-display {
+        font-size: 56px;
+        color: #7C4DFF;
+      }
+
+      .timer-hint {
+        font-size: 22px;
+        color: #999;
+        margin-top: 12px;
+        display: block;
+      }
+    }
+
+    .sleep-btn {
+      background: linear-gradient(135deg, #D4A5FF, #E8CEFF);
+    }
+  }
+
+  .form-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+
+    .form-label {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 20px;
+      background: #F5F5F5;
+      border-radius: 12px;
+      font-size: 28px;
+      box-sizing: border-box;
+    }
+
+    .option-group {
+      display: flex;
+      gap: 16px;
+
+      .option-item {
+        flex: 1;
+        text-align: center;
+        padding: 16px 0;
+        border-radius: 12px;
+        background: #F5F5F5;
+        font-size: 26px;
+        color: #666;
+
+        &.active {
+          background: #FFE4E8;
+          color: #FF6B81;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .amount-control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+
+      .amount-btn {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: #F5F5F5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        color: #FF6B81;
+      }
+
+      .amount-value {
+        font-size: 48px;
+        font-weight: bold;
+        color: #FF6B81;
+        min-width: 120px;
+        text-align: center;
+      }
+    }
+
+    .color-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      .color-item {
+        width: calc(50% - 8px);
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        border-radius: 12px;
+        background: #F5F5F5;
+
+        &.active {
+          background: #FFE4E8;
+          outline: 2px solid #FF6B81;
+        }
+
+        .color-dot {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          margin-right: 12px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .color-label {
+          font-size: 24px;
+          color: #333;
+        }
+      }
+    }
+
+    .switch-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .form-label {
+        margin-bottom: 0;
+      }
+
+      .toggle {
+        width: 88px;
+        height: 48px;
+        border-radius: 24px;
+        background: #ddd;
+        position: relative;
+        transition: background 0.3s;
+
+        &.on {
+          background: #FF6B81;
+
+          .toggle-dot {
+            transform: translateX(40px);
+          }
+        }
+
+        .toggle-dot {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #fff;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          transition: transform 0.3s;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  &.sleep-form .form-section .option-group .option-item.active {
+    background: #F0E6FF;
+    color: #7C4DFF;
+  }
+
+  .save-btn {
+    margin-top: 24px;
+    padding: 24px 0;
+    background: linear-gradient(135deg, #FF6B81, #FF8E9E);
+    border-radius: 48px;
+    text-align: center;
+
+    .save-btn-text {
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  &.sleep-form .save-btn {
+    background: linear-gradient(135deg, #D4A5FF, #E8CEFF);
+  }
+}

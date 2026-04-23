@@ -5,20 +5,32 @@ import { userStore, familyStore } from '@/stores'
 
 import './index.scss'
 
-function MineIndex() {
+const menuItems = [
+  { icon: '👶', label: '宝宝档案', url: '/pages/mine/baby-profile' },
+  { icon: '👨‍👩‍👧', label: '家庭管理', url: '/pages/mine/family' },
+  { icon: '⏰', label: '提醒管理', url: '/pages/mine/reminders' },
+]
+
+function SettingsPage() {
   const { userInfo, isLoggedIn } = userStore
   const { family, currentBaby } = familyStore
 
-  const menuItems = [
-    { icon: '👶', label: '宝宝档案', url: '/pages/mine/baby-profile' },
-    { icon: '👨‍👩‍👧', label: '家庭管理', url: '/pages/mine/family' },
-    { icon: '⏰', label: '提醒管理', url: '/pages/mine/reminders' },
-    { icon: '⚙️', label: '设置', url: '/pages/mine/settings' },
-  ]
+  const handleLogout = () => {
+    Taro.showModal({
+      title: '确认退出',
+      content: '退出登录后本地数据将被清除',
+      success: (res) => {
+        if (res.confirm) {
+          userStore.logout()
+          familyStore.reset()
+          Taro.reLaunch({ url: '/pages/index/index' })
+        }
+      },
+    })
+  }
 
   return (
-    <View className='mine-page'>
-      {/* 用户信息 */}
+    <View className='settings-page'>
       <View className='user-header'>
         <View className='user-avatar'>
           <Text className='avatar-emoji'>{isLoggedIn ? '😊' : '👤'}</Text>
@@ -34,7 +46,6 @@ function MineIndex() {
         )}
       </View>
 
-      {/* 宝宝卡片 */}
       {currentBaby && (
         <View className='baby-card'>
           <Text className='baby-emoji'>👶</Text>
@@ -45,7 +56,6 @@ function MineIndex() {
         </View>
       )}
 
-      {/* 菜单列表 */}
       <View className='menu-list'>
         {menuItems.map(item => (
           <View
@@ -59,8 +69,34 @@ function MineIndex() {
           </View>
         ))}
       </View>
+
+      <View className='menu-list'>
+        <View className='menu-item'>
+          <Text className='menu-icon'>ℹ️</Text>
+          <Text className='menu-label'>关于我们</Text>
+          <Text className='menu-arrow'>›</Text>
+        </View>
+        <View className='menu-item'>
+          <Text className='menu-icon'>🔒</Text>
+          <Text className='menu-label'>隐私政策</Text>
+          <Text className='menu-arrow'>›</Text>
+        </View>
+        <View className='menu-item'>
+          <Text className='menu-icon'>📄</Text>
+          <Text className='menu-label'>用户协议</Text>
+          <Text className='menu-arrow'>›</Text>
+        </View>
+      </View>
+
+      {isLoggedIn && (
+        <View className='logout-btn' onClick={handleLogout}>
+          <Text className='logout-text'>退出登录</Text>
+        </View>
+      )}
+
+      <Text className='version'>v1.0.0</Text>
     </View>
   )
 }
 
-export default observer(MineIndex)
+export default observer(SettingsPage)

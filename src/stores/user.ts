@@ -26,11 +26,22 @@ class UserStore {
     this.loading = true
     try {
       const { code } = await Taro.login()
-      // TODO: 调用云函数完成登录
+      // TODO: 调用云函数完成登录，获取真实用户信息
       console.log('login code:', code)
+
+      const mockUser: UserInfo = {
+        _id: Date.now().toString(),
+        openId: code,
+        nickname: '微信用户',
+        avatar: '',
+        createdAt: Date.now(),
+      }
+
       runInAction(() => {
+        this.userInfo = mockUser
         this.isLoggedIn = true
         this.loading = false
+        setStorage(KEYS.USER_INFO, mockUser)
       })
     } catch (err) {
       runInAction(() => {
